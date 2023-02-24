@@ -1,0 +1,11 @@
+docker-compose.zip
+nifi_registry/conf/authorizers.xml
+nifi_registry/conf/bootstrap-hashicorp-vault.conf
+nifi_registry/conf/bootstrap-gcp.conf
+nifi_registry/conf/bootstrap-azure.conf
+nifi_registry/conf/bootstrap-aws.conf
+nifi_registry/conf/bootstrap.conf
+nifi_registry/conf/identity-providers.xml
+nifi_registry/conf/logback.xml
+nifi_registry/conf/nifi-registry.properties
+nifi_registry/conf/registry-aliases.xml

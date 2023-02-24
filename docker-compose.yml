@@ -1,0 +1,63 @@
+version: '3'
+services:
+  nifi:
+    hostname: nifi
+    container_name: nifi
+    image: apache/nifi:latest
+    restart: on-failure
+    ports:
+      - 8443:8443
+      - 12222:12222
+    environment:
+      - SINGLE_USER_CREDENTIALS_USERNAME=icam-testlab-admin
+      - SINGLE_USER_CREDENTIALS_PASSWORD=icam-testlab-admin
+      - NIFI_WEB_HTTPS_PORT=8443
+    volumes:
+      - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi/state:/opt/nifi/nifi-current/state
+      - ./nifi/logs:/opt/nifi/nifi-current/logs
+      # uncomment the next line to use your local directory (pasting neccessary see README)
+      #- ./nifi/conf:/opt/nifi/nifi-current/conf
+
+    networks:
+      - env-network
+
+  nifi-registry:
+    hostname: nifi-registry
+    container_name: nifi-registry
+    image: apache/nifi-registry:latest
+    restart: on-failure
+    depends_on:
+      - nifi
+    ports:
+      - 18080:18080
+    environment:
+      - LOG_LEVEL=INFO
+      - NIFI_REGISTRY_DB_DIR=/opt/nifi-registry/nifi-registry-current/database
+      - NIFI_REGISTRY_FLOW_PROVIDER=file
+      - NIFI_REGISTRY_FLOW_STORAGE_DIR=/opt/nifi-registry/nifi-registry-current/flow_storage
+    volumes:
+      - ./nifi_registry/database:/opt/nifi-registry/nifi-registry-current/database
+      - ./nifi_registry/flow_storage:/opt/nifi-registry/nifi-registry-current/flow_storage
+      # uncomment the next line to use your local directory (pasting neccessary see README)
+      #- ./nifi_registry/conf:/opt/nifi-registry/nifi-registry-current/conf
+
+    networks:
+      - env-network
+  redis:
+    hostname: redis
+    container_name: redis
+    image: bitnami/redis:latest
+    ports:
+      - 6379:6379
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - env-network
+
+networks:
+  env-network:
+    driver: bridge
