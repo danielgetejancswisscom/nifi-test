@@ -30,7 +30,7 @@
         <identifier>single-user-provider</identifier>
         <class>org.apache.nifi.authentication.single.user.SingleUserLoginIdentityProvider</class>
         <property name="Username">icam-testlab-admin</property>
-        <property name="Password">$2b$12$6B3SPJtpLkuYJY17bRO.mOKRsXIlYyMXeyMU8DddcoW3hysDsKlYe</property>
+        <property name="Password">$2b$12$EJTHZlmJU4.V/6xZhu0Sx.Tgku9uZEsPao2I/Uj4U/QQD/SOaaIi.</property>
     </provider>
     <!--
         Identity Provider for users logging in with username/password against an LDAP server.

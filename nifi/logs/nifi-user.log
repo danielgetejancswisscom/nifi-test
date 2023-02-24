@@ -564,3 +564,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at org.apache.nifi.registry.flow.StandardFlowRegistryClientNode.getBuckets(StandardFlowRegistryClientNode.java:190)
 	at org.apache.nifi.web.dao.impl.StandardFlowRegistryDAO.getBucketsForUser(StandardFlowRegistryDAO.java:115)
 	... 139 common frames omitted
+2023-02-24 09:57:06,977 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2023-02-24 09:57:07,068 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Fri Feb 24 09:57:07 UTC 2023
+2023-02-24 09:57:07,571 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Fri Feb 24 09:57:07 UTC 2023
+2023-02-24 09:57:07,572 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
