@@ -20,7 +20,7 @@ services:
       - ./nifi/state:/opt/nifi/nifi-current/state
       - ./nifi/logs:/opt/nifi/nifi-current/logs
       # uncomment the next line to use your local directory (pasting neccessary see README)
-      #- ./nifi/conf:/opt/nifi/nifi-current/conf
+      - ./nifi/conf:/opt/nifi/nifi-current/conf
 
     networks:
       - env-network
@@ -43,7 +43,7 @@ services:
       - ./nifi_registry/database:/opt/nifi-registry/nifi-registry-current/database
       - ./nifi_registry/flow_storage:/opt/nifi-registry/nifi-registry-current/flow_storage
       # uncomment the next line to use your local directory (pasting neccessary see README)
-      #- ./nifi_registry/conf:/opt/nifi-registry/nifi-registry-current/conf
+      - ./nifi_registry/conf:/opt/nifi-registry/nifi-registry-current/conf
 
     networks:
       - env-network

@@ -1,0 +1,119 @@
+{
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User",
+    "urn:ietf:params:scim:schemas:extension:icam:2.1:User"
+  ],
+  "id": "1e4fac08-012b-5bb1-bf2a-fdca2a464c81",
+  "externalId": "1e4fac08-012b-5bb1-bf2a-fdca2a464c81",
+  "meta": {
+    "resourceType": "User",
+    "created": "2022-08-16T10:53:18",
+    "lastModified": "2022-08-16T10:53:18",
+    "location": "bla"
+  },
+  "userName": "1e4fac08-012b-5bb1-bf2a-fdca2a464c81",
+  "name": {
+    "honorificPrefix": "MR",
+    "familyName": "Bla",
+    "givenName": "Bla"
+  },
+  "preferredLanguage": "ger",
+  "emails": [
+    {
+      "type": "work",
+      "value": "bla.bla@email.com"
+    }
+  ],
+  "addresses": [
+    {
+      "type": "home",
+      "streetAddress": "Bla",
+      "locality": "Bla 1",
+      "postalCode": "8200",
+      "region": "SH",
+      "country": "CH"
+    }
+  ],
+  "phoneNumbers": [],
+  "urn:ietf:params:scim:schemas:extension:icam:2.1:User": {
+    "personalData": {
+      "dateOfBirth": "1993-05-14T00:00:00",
+      "gender": "1",
+      "nationalityCode": "CHE"
+    },
+    "securityClearances": [],
+    "personalIdentifier": {
+      "socialSecurityNumber": "7568800204002",
+      "socialSecurityNumberHash": "9f3814f45777059db62e091b8f778be09e3961a192b445c9c8c727ebd4eca164",
+      "shortSign": "543246",
+      "employeeNumbers": [
+        {
+          "value": "L7720400",
+          "type": "vbs"
+        }
+      ]
+    },
+    "biometricIdentifiers": [],
+    "cardIdentifiers": [],
+    "contracts": [
+      {
+        "id": "cd183f18-e2cb-558d-a1a8-783e0da323df",
+        "externalId": "cd183f18-e2cb-558d-a1a8-783e0da323df",
+        "userType": "pers_mil_ch",
+        "dataSource": {
+          "id": "00880020400",
+          "name": "PISA"
+        },
+        "entryDate": "2008-05-14T00:00:00",
+        "leavingDate": "2099-12-31T23:59:59",
+        "jobFunction": "Feldweibel",
+        "ranks": [
+          {
+            "abbreviation": "csm",
+            "validFrom": "2018-07-09T00:00:00"
+          }
+        ],
+        "organization": {
+          "id": "9a3e52da-d915-5cbd-8edf-11b34ff26cb9",
+          "externalId": "9a3e52da-d915-5cbd-8edf-11b34ff26cb9",
+          "validFrom": "2018-07-09T00:00:00",
+          "abbreviation": {
+            "german": "Test Blau Kp-A",
+            "french": "Test Blau Kp-A",
+            "italian": "Test Blau Kp-A",
+            "english": "Test Blau Kp-A"
+          }
+        },
+        "services": [
+          {
+            "id": "2f9fcc3f-b6c9-5bbb-ae9f-176afa9647b2",
+            "externalId": "2f9fcc3f-b6c9-5bbb-ae9f-176afa9647b2",
+            "unit": {
+              "id": "9a3e52da-d915-5cbd-8edf-11b34ff26cb9",
+              "externalId": "9a3e52da-d915-5cbd-8edf-11b34ff26cb9",
+              "abbreviation": {
+                "german": "Test Blau Kp-A",
+                "french": "Test Blau Kp-A",
+                "italian": "Test Blau Kp-A",
+                "english": "Test Blau Kp-A"
+              }
+            },
+            "validFrom": "2020-01-27T00:00:00",
+            "validTo": "2023-01-05T09:55:37"
+          }
+        ],
+        "validationLevel": "validated",
+        "isLocked": false
+      }
+    ],
+    "accounts": [
+      {
+        "externalId": "FE542152618F59C68AD07C2CD29F6AC2",
+        "source": "AIS",
+        "name": "UL7720400",
+        "userPrincipalName": "Johann-00.JOPE00.Peitscher@mil.admin.ch",
+        "status": "active"
+      }
+    ]
+  }
+}
