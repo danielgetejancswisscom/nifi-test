@@ -588,3 +588,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 2023-02-24 10:16:36,194 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Fri Feb 24 10:16:36 UTC 2023
 2023-02-24 10:16:36,716 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Fri Feb 24 10:16:36 UTC 2023
 2023-02-24 10:16:36,718 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
+2023-02-24 11:17:00,331 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Initializing Authorizer
+2023-02-24 11:17:00,438 INFO [main] o.a.n.a.FileUserGroupProvider Users/Groups file loaded at Fri Feb 24 11:17:00 UTC 2023
+2023-02-24 11:17:01,062 INFO [main] o.a.n.a.FileAccessPolicyProvider Authorizations file loaded at Fri Feb 24 11:17:01 UTC 2023
+2023-02-24 11:17:01,063 INFO [main] o.a.n.a.single.user.SingleUserAuthorizer Configuring Authorizer
